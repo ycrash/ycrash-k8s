@@ -14,7 +14,10 @@
 2. Download `license.lic` and put it into this directory
 3. Copy `yc-agent-config.yaml.template` to `yc-agent-config.yaml` and set the values.
 
-
+	```sh
+	cp yc-agent-config.yaml.template yc-agent-config.yaml
+	```
+	
 ## Run locally with docker-compose
 
 ### Pre-requisite:
