@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: buggyapp
+  name: buggyapp
+spec:
+  ports:
+  - port: 9010
+    protocol: TCP
+    targetPort: 9010
+  selector:
+    app: buggyapp

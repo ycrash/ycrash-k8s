@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: yc-web
+  labels:
+    app: yc-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: yc-web
+  template:
+    metadata:
+      labels:
+        app: yc-web
+    spec:
+      containers:
+      - name: yc
+        image: andylibrian/ycrash-unofficial:latest
+        ports:
+        - containerPort: 8080
+        volumeMounts:
+        - name: ycrash-license
+          mountPath: "/opt/workspace/yc/license.lic"
+          subPath: license.lic
+      volumes:
+      - name: ycrash-license
+        secret:
+          secretName: ycrash-license
+          items:
+          - key: license.lic
+            path: license.lic
+

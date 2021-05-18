@@ -1,0 +1,23 @@
+version: "3.9"
+services:
+  ycrash:
+    build:
+      context: ./docker-images/ycrash
+    image: andylibrian/ycrash-unofficial:latest
+    ports:
+    - "8080:8080"
+    volumes:
+    - "./license.lic:/opt/workspace/yc/license.lic"
+  buggyapp:
+    build:
+      context: ./docker-images/buggyapp
+    image: andylibrian/buggyapp-unofficial:latest
+    depends_on:
+    - ycrash
+    ports:
+    - "9010:9010"
+    - "8085:8085"
+    volumes:
+    - "./yc-agent-config.yaml:/opt/workspace/yc/agent/config.yaml"
+
+
