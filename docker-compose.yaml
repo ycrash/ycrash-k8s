@@ -3,7 +3,7 @@ services:
   ycrash:
     build:
       context: ./docker-images/ycrash
-    image: andylibrian/ycrash-unofficial:latest
+    image: ycrash/ycrash:v1.0
     ports:
     - "8080:8080"
     volumes:
@@ -11,7 +11,7 @@ services:
   buggyapp:
     build:
       context: ./docker-images/buggyapp
-    image: andylibrian/buggyapp-unofficial:latest
+    image: ycrash/buggyapp:v1.0
     depends_on:
     - ycrash
     ports:

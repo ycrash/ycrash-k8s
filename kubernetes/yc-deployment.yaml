@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: yc
-        image: andylibrian/ycrash-unofficial:latest
+        image: ycrash/ycrash:v1.0
         ports:
         - containerPort: 8080
         volumeMounts:
