@@ -15,7 +15,7 @@ spec:
         app: buggyapp
     spec:
       containers:
-      - name: yc
+      - name: buggyapp
         image: ycrash/buggyapp:v1.0
         ports:
         - containerPort: 9010
@@ -24,6 +24,9 @@ spec:
         - name: ycrash-agent-config
           mountPath: "/opt/workspace/yc/agent/config.yaml"
           subPath: config.yaml
+        resources:
+          limits:
+            memory: 1Gi
       volumes:
       - name: ycrash-agent-config
         secret:

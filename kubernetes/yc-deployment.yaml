@@ -17,6 +17,7 @@ spec:
       containers:
       - name: yc
         image: ycrash/ycrash:v1.0
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
         volumeMounts:
