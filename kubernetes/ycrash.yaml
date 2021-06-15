@@ -1,3 +1,5 @@
+# Note this is combination of yc-deployment.yaml and yc-service.yaml. Alwasy update the image whenever we make a new yCrash releaseUploading
+# Next upload this file in tier1app.com bucket and provid downloadable link to the users
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -31,4 +33,17 @@ spec:
           items:
           - key: license.lic
             path: license.lic
-
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: yc-web
+  name: yc-web
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: yc-web

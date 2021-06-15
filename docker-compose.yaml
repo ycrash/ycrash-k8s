@@ -3,7 +3,7 @@ services:
   ycrash:
     build:
       context: ./docker-images/ycrash
-    image: ycrash/ycrash:v1.0
+    image: ycrash/ycrash:latest
     ports:
     - "8080:8080"
     volumes:
