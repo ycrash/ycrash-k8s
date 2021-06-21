@@ -1,6 +1,8 @@
 # ycrash-k8s
 
-If you want to quickly run the latest yCrash version on Kubernetes then follow steps given [here]https://docs.ycrash.io/ycrash-server/administration/kubernetes.html. 
+If you want to quickly run the latest yCrash version on Kubernetes then follow steps given [here](https://docs.ycrash.io/ycrash-server/administration/kubernetes.html). 
+
+You can also integrate yCrash with the Prometheus. For more details visit [Integrate yCrash with Prometheus](https://docs.ycrash.io/ycrash-integration/monitoring-tools/prometheus.html#prerequisites) page.
 
 If you wish to build Docker image of yCrash server and run it on Kubernetes by yourself then follow the setps given below:
 
