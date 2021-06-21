@@ -1,5 +1,5 @@
 #!/usr/bin/with-contenv bash
 
-cd /opt/workspace/yc/agent
+cd /opt/workspace/yc
 ./yc -c config.yaml -a buggyapp
 

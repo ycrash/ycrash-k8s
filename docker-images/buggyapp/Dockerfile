@@ -13,10 +13,10 @@ RUN apt-get update \
 # Setup yc-agent
 RUN mkdir -p /opt/workspace/yc
 RUN cd /opt/workspace/yc \
-  && curl -fsSL https://tier1app.com/dist/ycrash/yc-latest.zip -o yc-latest.zip \
-  && unzip yc-latest.zip \
-  && rm yc-latest.zip \
-  && chmod +x agent/yc
+  && curl -fsSL https://tier1app.com/dist/ycrash/yc-agent-latest.zip -o yc-agent-latest.zip \
+  && unzip yc-agent-latest.zip \
+  && rm yc-agent-latest.zip \
+  && chmod +x yc
 
 # Setup buggyapp
 RUN mkdir -p /opt/workspace/buggyapp

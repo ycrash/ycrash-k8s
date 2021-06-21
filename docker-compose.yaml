@@ -11,7 +11,7 @@ services:
   buggyapp:
     build:
       context: ./docker-images/buggyapp
-    image: ycrash/buggyapp:v1.0
+    image: ycrash/buggyapp:latest
     depends_on:
     - ycrash
     ports:

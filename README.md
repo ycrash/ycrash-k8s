@@ -1,5 +1,9 @@
 # ycrash-k8s
 
+If you want to quickly run the latest yCrash version on Kubernetes then follow steps given [here]https://docs.ycrash.io/ycrash-server/administration/kubernetes.html. 
+
+If you wish to build Docker image of yCrash server and run it on Kubernetes by yourself then follow the setps given below:
+
 ## Setup
 
 1. Clone the repo: 
@@ -20,6 +24,8 @@
 	
 ## Run locally with docker-compose
 
+*Prometheus integration is only supported in kubernetes setup.*
+
 ### Pre-requisite:
 
 - [docker-compose installed](https://docs.docker.com/compose/install/)
@@ -38,6 +44,8 @@ docker-compose ps
 
 
 ## Run locally with Docker (Without docker-compose)
+
+*Prometheus integration is only supported in kubernetes setup.*
 
 1. To build images:
 
@@ -58,9 +66,9 @@ docker-compose ps
 
    Then open http://localhost:8080 and http://localhost:9010
 
-
-
 ## Run on Kubernetes
+
+*If you run containers with the above steps, please stop them first before continuing.*
 
 Kubernetes manifests (yaml) resides in `kubernetes/` directory.
 

@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: buggyapp
-        image: ycrash/buggyapp:v1.0
+        image: ycrash/buggyapp:latest
         ports:
         - containerPort: 9010
         - containerPort: 8085
