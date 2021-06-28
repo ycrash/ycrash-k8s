@@ -22,7 +22,7 @@ spec:
         - containerPort: 8085
         volumeMounts:
         - name: ycrash-agent-config
-          mountPath: "/opt/workspace/yc/agent/config.yaml"
+          mountPath: "/opt/workspace/yc/config.yaml"
           subPath: config.yaml
         resources:
           limits:
