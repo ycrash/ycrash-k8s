@@ -12,6 +12,6 @@ RUN curl -fsSL https://tier1app.com/dist/ycrash/yc-latest.zip -o yc-latest.zip &
 
 EXPOSE 8080
 
-ENTRYPOINT ["/usr/bin/tini", "--", "java", "-Xms2g", "-Xmx4g", "-Dapp=yc", "-DlogDir=.", "-DuploadDir=.", "-jar", "webapp-runner-8.0.33.4.jar", "-AconnectionTimeout=3600000", "--port", "8080", "yc.war"]
+ENTRYPOINT ["/usr/bin/tini", "--", "java", "-Xms2g", "-Xmx4g", "-Dapp=yc", "-DlogDir=.", "-DuploadDir=.", "-jar", "webapp-runner.jar", "-AconnectionTimeout=3600000", "--port", "8080", "yc.war"]
 
 
