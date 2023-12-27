@@ -45,9 +45,9 @@ docker-compose ps
 ```
 
 
-## Run locally with Docker (Without docker-compose)
+## Run locally with Docker with default params (Without docker-compose) 
 
-*Prometheus integration is only supported in kubernetes setup.*
+*Prometheus integration is only supported in a Kubernetes setup. Please note that this option runs with default arguments.*
 
 1. To build images:
 
@@ -67,6 +67,24 @@ docker-compose ps
    ```
 
    Then open http://localhost:8080 and http://localhost:9010
+   
+## Run locally with Docker passing in runtime params
+
+*The yCrash server parameter is passed during runtime*
+
+1. To build images:
+
+   ```sh
+  docker build -t ycrash -f ./docker-images/ycrash/DockerfileNoDefaults .
+   ```
+
+2. To run the container locally:
+
+   ```sh
+   docker run -ti --rm -p 8080:8080 --name ycrash -v $(pwd)/license.lic:/opt/workspace/yc/license.lic ycrash -Xms2g -Xmx4g -Dapp=yc -DlogDir=. -DuploadDir=. -jar webapp-runner.jar -AconnectionTimeout=3600000 --port 8080 yc.war
+   ```
+   
+The above demonstrates how to pass various parameters, such as Xmx, Xms, -DuploadDir, etc., to the yCrash server during runtime.
 
 ## Run on Kubernetes
 
