@@ -63,7 +63,7 @@ docker-compose ps
    ```
 
    ```sh
-   docker run -ti --rm -p 9010:9010 -p 8085:8085 --name buggyapp -v $(pwd)/yc-agent-config.yaml:/opt/workspace/yc/config.yaml buggyapp
+   docker run -ti --rm -p 9010:9010 -p 8085:8085 --name buggyapp -v $(pwd)/yc-agent-config.yaml:/opt/workspace/yc-agent/linux/config.yaml buggyapp
    ```
 
    Then open http://localhost:8080 and http://localhost:9010
